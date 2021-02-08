@@ -410,7 +410,7 @@ public class WebCrawler implements Runnable {
         // Sub-classed should override this to add their custom functionality
     }
 
-    private void processPage(WebURL curURL) throws IOException, InterruptedException, ParseException {
+    protected void processPage(WebURL curURL) throws IOException, InterruptedException, ParseException {
         PageFetchResult fetchResult = null;
         Page page = new Page(curURL);
         try {
